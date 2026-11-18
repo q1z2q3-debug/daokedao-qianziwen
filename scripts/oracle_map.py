@@ -273,3 +273,29 @@ M = {
  "尽": [("vessel", 0, 8, .8, 0), ("hand", 0, -14, .6, 0)],
  "命": [("mouth_small", 0, -12, .8, 0), ("person", 0, 14, .6, 0)],
 }
+
+
+# 自动拼字表并入：手工表优先
+try:
+    from oracle_map_auto import M_AUTO
+    for _k, _v in M_AUTO.items():
+        M.setdefault(_k, _v)
+except ImportError:
+    pass
+
+def _flatten(specs, depth=2):
+    out = []
+    for sp in specs:
+        name = sp[0]
+        if isinstance(name, tuple) and len(name) == 2 and name[0] == '@' and depth > 0:
+            sub = M.get(name[1])
+            if sub:
+                inner = _flatten(sub, depth - 1)
+                for (n, dx, dy, sc, rot) in inner:
+                    out.append((n, sp[1] + dx * sp[3] * .8, sp[2] + dy * sp[3] * .8, sp[3] * sc * .8, rot))
+                continue
+        out.append(sp)
+    return out
+
+for _k in list(M.keys()):
+    M[_k] = _flatten(M[_k])
