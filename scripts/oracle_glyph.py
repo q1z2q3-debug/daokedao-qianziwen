@@ -280,6 +280,23 @@ def drum():      # 鼓
             '<path d="M-18,-6 L18,-6" stroke-width="2.2"/>'
             '<path d="M26,-20 L14,-6" stroke-width="2.6"/>')
 
+
+def cart():      # 車：双轮一轴
+    return ('<circle cx="0" cy="6" r="14" stroke-width="3.0"/>'
+            '<path d="M-14,6 L14,6 M0,-8 L0,20" stroke-width="2.2"/>'
+            '<path d="M-12,-14 L12,-14 M-12,-14 L-12,-4 M12,-14 L12,-4" stroke-width="2.6"/>')
+
+def dog():       # 犬：侧犬张口翘尾
+    return ('<path d="M-18,8 C-10,-4 4,-6 12,0" stroke-width="3.0"/>'
+            '<path d="M12,0 L22,-10" stroke-width="2.6"/>'
+            '<path d="M-18,8 L-24,-2 M-10,10 L-10,20 M2,8 L2,20 M12,4 L14,18" stroke-width="2.4"/>'
+            '<path d="M-14,-2 L-20,-8" stroke-width="2.2"/>')
+
+def flag():       # 㫃：旗杆与飘带
+    return ('<path d="M-12,-24 L-12,24" stroke-width="3.0"/>'
+            '<path d="M-12,-22 C0,-14 8,-10 18,-6" stroke-width="2.6"/>'
+            '<path d="M-12,-10 C-2,-4 6,0 14,4" stroke-width="2.4"/>')
+
 COMP = dict(sun=sun, moon=moon, star=star, mountain=mountain, water=water, fire=fire,
             tree=tree, grain=grain, person=person, big=big_person, woman=woman, child=child,
             eye=eye, mouth=mouth, hand=hand, foot=foot, roof=roof, vessel=vessel,
@@ -288,7 +305,8 @@ COMP = dict(sun=sun, moon=moon, star=star, mountain=mountain, water=water, fire=
             city=city, knife=knife, heart=heart, sound=sound, bar=bar, grass=grass,
             soil=soil, thread=thread, two_hands=two_hands, cloud=cloud, rain=rain,
             mouth_small=mouth_small, fish=fish, tiger=tiger, feather=feather, metal=metal, net=net, head=head, food=food, bamboo=bamboo, sheep=sheep,
-            valley=valley, ear=ear, altar=altar, drum=drum)
+            valley=valley, ear=ear, altar=altar, drum=drum,
+            cart=cart, dog=dog, flag=flag)
 
 def glyph(chars, size=64, cls=""):
     """按构件规格拼字；chars 为 [(构件名, dx, dy, scale, rot)]，返回内联 SVG"""

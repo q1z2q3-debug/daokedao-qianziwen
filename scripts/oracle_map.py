@@ -276,6 +276,8 @@ M = {
 
 
 # 自动拼字表并入：手工表优先
+M_MANUAL = dict(M)
+
 try:
     from oracle_map_auto import M_AUTO
     for _k, _v in M_AUTO.items():
@@ -297,5 +299,12 @@ def _flatten(specs, depth=2):
         out.append(sp)
     return out
 
+try:
+    from auto_glyphs import REFINE
+    for _k, _v in REFINE.items():
+        M[_k] = _v
+except ImportError:
+    pass
+
 for _k in list(M.keys()):
-    M[_k] = _flatten(M[_k])
+    M[_k] = [sp if not isinstance(sp[0], tuple) else ("bar", 0, 0, .8, 0) for sp in _flatten(M[_k])]
