@@ -4049,7 +4049,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--ochre);outline-offs
       var on = Number(btn.getAttribute('data-go')) === n;
       if (on) { btn.setAttribute('aria-current','true'); } else { btn.removeAttribute('aria-current'); }
     });
-    document.title = (n === 34 ? '附录 · 识字' : '第' + cn(n) + '课 · ' + title) + '｜润泽说 蒙学之千字文';
+    document.title = (n === 34 ? '附录 · 识字' : n === 35 ? '附录 · 字源全解' : '第' + cn(n) + '课 · ' + title) + '｜润泽说 蒙学之千字文';
     if (opened) {
       window.scrollTo({top:0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
     }
