@@ -60,9 +60,9 @@ thead th{background:#E5DAC4;font-weight:600;font-size:13px;letter-spacing:.14em;
  color:#5A4E42;padding:9px 12px;text-align:left;border-bottom:1px solid #C9BCA4}
 tbody td{padding:10px 12px;border-bottom:1px solid #E1D7C3;vertical-align:top;word-break:break-word}
 tbody td:nth-child(2){font-size:26px;line-height:1.3;letter-spacing:.06em;color:#2E2620;text-align:center}
-tbody td:first-child{padding:6px 8px}
+tbody td:first-child{padding:6px 8px;white-space:nowrap}
 .glyph{display:block;margin:0 auto}
-.nog{color:#B8AA94;font-size:12px}
+.jin{color:#C3B49D;font-size:16px}
 tr.hit td{background:#FBF3DE}
 .lesson{display:block}
 .lesson.hide{display:none}
@@ -90,7 +90,7 @@ def esc(s):
 secs = []
 for g in ROWS:
     def row(r):
-        gsvg = og.glyph(GLYPH_MAP[r[0]], 46) if r[0] in GLYPH_MAP else '<span class="nog">待制</span>'
+        gsvg = og.glyph(GLYPH_MAP[r[0]], 46) if r[0] in GLYPH_MAP else '<span class="jin">—</span>'
         return (f'<tr><td title="释形示意">{gsvg}</td><td>{esc(r[0])}</td>'
                 f'<td>{esc(r[1])}</td><td>{esc(r[2])}</td><td>{esc(r[3])}</td></tr>')
     rows = "\n".join(row(r) for r in g["rows"])
