@@ -235,6 +235,51 @@ def metal():     # 金：土中两点
             '<circle cx="8" cy="-6" r="3" fill="currentColor" stroke="none"/>'
             '<path d="M-16,10 L-16,24 M14,10 L14,24" stroke-width="2.4"/>')
 
+
+def net():       # 网
+    return ('<path d="M-26,-18 L26,-18 M-26,18 L26,18" stroke-width="2.6"/>'
+            '<path d="M-26,-18 L26,18 M26,-18 L-26,18" stroke-width="2.2"/>'
+            '<path d="M0,-18 L0,18 M-26,0 L26,0" stroke-width="2.0"/>')
+
+def head():      # 首
+    return ('<circle cx="0" cy="6" r="16" stroke-width="3.0"/>'
+            '<path d="M-10,-4 L-14,-26 M0,-8 L0,-28 M10,-4 L14,-26" stroke-width="2.6"/>'
+            '<circle cx="-6" cy="4" r="2" fill="currentColor" stroke="none"/>'
+            '<circle cx="6" cy="4" r="2" fill="currentColor" stroke="none"/>')
+
+def food():      # 食
+    return ('<path d="M-20,-14 L20,-14" stroke-width="3.0"/>'
+            '<path d="M-18,-14 C-16,8 -10,16 0,16 C10,16 16,8 18,-14" stroke-width="3.0"/>'
+            '<path d="M-10,-14 L-8,-26 M8,-14 L10,-26" stroke-width="2.2"/>')
+
+def bamboo():    # 竹
+    return ('<path d="M-10,-26 L-10,26 M10,-26 L10,26" stroke-width="2.8"/>'
+            '<path d="M-10,-14 L-20,-2 M-10,-2 L-22,8 M10,-16 L20,-4 M10,-4 L22,6" stroke-width="2.4"/>')
+
+def sheep():     # 羊
+    return ('<path d="M-14,-18 C-22,-6 -12,4 0,4 C12,4 22,-6 14,-18" stroke-width="3.0"/>'
+            '<path d="M-8,-18 L-8,4 M8,-18 L8,4" stroke-width="2.4"/>'
+            '<path d="M-8,4 L-8,24 M8,4 L8,24" stroke-width="2.4"/>')
+
+def valley():    # 谷
+    return ('<path d="M-24,-22 L-8,2 M24,-22 L8,2" stroke-width="3.0"/>'
+            '<path d="M-8,2 L-8,22 M8,2 L8,22" stroke-width="2.4"/>'
+            '<path d="M-4,10 L4,10 M-4,18 L4,18" stroke-width="2.0"/>')
+
+def ear():       # 耳
+    return ('<path d="M-12,-20 C-10,0 -8,16 -2,24 C8,30 14,18 14,4 C14,-10 8,-20 0,-20 Z" stroke-width="3.0"/>'
+            '<path d="M-4,-12 C-2,0 0,10 4,14" stroke-width="2.2"/>')
+
+def altar():     # 示
+    return ('<path d="M-20,-18 L20,-18" stroke-width="3.0"/>'
+            '<path d="M0,-18 L0,22" stroke-width="2.8"/>'
+            '<path d="M-12,-4 L-12,10 M12,-4 L12,10" stroke-width="2.4"/>')
+
+def drum():      # 鼓
+    return ('<path d="M-18,-16 C-22,0 -22,10 -18,16 L18,16 C22,10 22,0 18,-16 Z" stroke-width="3.0"/>'
+            '<path d="M-18,-6 L18,-6" stroke-width="2.2"/>'
+            '<path d="M26,-20 L14,-6" stroke-width="2.6"/>')
+
 COMP = dict(sun=sun, moon=moon, star=star, mountain=mountain, water=water, fire=fire,
             tree=tree, grain=grain, person=person, big=big_person, woman=woman, child=child,
             eye=eye, mouth=mouth, hand=hand, foot=foot, roof=roof, vessel=vessel,
@@ -242,7 +287,8 @@ COMP = dict(sun=sun, moon=moon, star=star, mountain=mountain, water=water, fire=
             dragon=dragon, jade=jade, cloth=cloth, speech=speech, gate=gate, walk=walk,
             city=city, knife=knife, heart=heart, sound=sound, bar=bar, grass=grass,
             soil=soil, thread=thread, two_hands=two_hands, cloud=cloud, rain=rain,
-            mouth_small=mouth_small, fish=fish, tiger=tiger, feather=feather, metal=metal)
+            mouth_small=mouth_small, fish=fish, tiger=tiger, feather=feather, metal=metal, net=net, head=head, food=food, bamboo=bamboo, sheep=sheep,
+            valley=valley, ear=ear, altar=altar, drum=drum)
 
 def glyph(chars, size=64, cls=""):
     """按构件规格拼字；chars 为 [(构件名, dx, dy, scale, rot)]，返回内联 SVG"""
