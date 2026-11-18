@@ -211,6 +211,30 @@ def rain():      # 雨：天幕下点滴
 def mouth_small():
     return '<path d="M-12,-8 L12,-8 L12,8 L-12,8 Z" stroke-width="2.4"/>'
 
+
+def fish():      # 鱼：身、鳍、尾
+    return ('<path d="M-20,0 C-10,-16 8,-16 18,0 C8,16 -10,16 -20,0 Z" stroke-width="3.0"/>'
+            '<path d="M-20,0 L-30,-8 M-20,0 L-30,8" stroke-width="2.6"/>'
+            '<path d="M0,-12 L0,12" stroke-width="2.2"/>'
+            '<circle cx="10" cy="-4" r="2" fill="currentColor" stroke="none"/>')
+
+def tiger():     # 虍：虎头
+    return ('<path d="M-20,-8 C-16,-24 4,-26 12,-18" stroke-width="2.8"/>'
+            '<path d="M-20,-8 L-20,10 M14,-14 L14,10" stroke-width="2.4"/>'
+            '<path d="M-6,-12 L-6,-2 M4,-10 L4,0" stroke-width="2.2"/>')
+
+def feather():   # 羽：一根羽
+    return ('<path d="M0,-26 C-6,-10 -6,10 0,26" stroke-width="2.8"/>'
+            + ''.join('<path d="M%d,%d L%d,%d" stroke-width="2.1"/>' % (0,y, s*x, y+4)
+                      for (x,y,s) in ((-1,-16,-1),(-1,-6,-1),(1,4,1),(1,14,1)))
+            )
+
+def metal():     # 金：土中两点
+    return ('<path d="M-24,6 L24,6" stroke-width="3.0"/>'
+            '<circle cx="-10" cy="-6" r="3" fill="currentColor" stroke="none"/>'
+            '<circle cx="8" cy="-6" r="3" fill="currentColor" stroke="none"/>'
+            '<path d="M-16,10 L-16,24 M14,10 L14,24" stroke-width="2.4"/>')
+
 COMP = dict(sun=sun, moon=moon, star=star, mountain=mountain, water=water, fire=fire,
             tree=tree, grain=grain, person=person, big=big_person, woman=woman, child=child,
             eye=eye, mouth=mouth, hand=hand, foot=foot, roof=roof, vessel=vessel,
@@ -218,7 +242,7 @@ COMP = dict(sun=sun, moon=moon, star=star, mountain=mountain, water=water, fire=
             dragon=dragon, jade=jade, cloth=cloth, speech=speech, gate=gate, walk=walk,
             city=city, knife=knife, heart=heart, sound=sound, bar=bar, grass=grass,
             soil=soil, thread=thread, two_hands=two_hands, cloud=cloud, rain=rain,
-            mouth_small=mouth_small)
+            mouth_small=mouth_small, fish=fish, tiger=tiger, feather=feather, metal=metal)
 
 def glyph(chars, size=64, cls=""):
     """按构件规格拼字；chars 为 [(构件名, dx, dy, scale, rot)]，返回内联 SVG"""
@@ -227,5 +251,5 @@ def glyph(chars, size=64, cls=""):
         name, dx, dy, sc, rot = (list(spec) + [0, 0, 1, 0])[:5]
         inner = COMP[name]()
         body.append(f'<g transform="translate({dx},{dy}) scale({sc}) rotate({rot})">{inner}</g>')
-    return (f'<svg class="glyph {cls}" viewBox="-50 -50 100 100" width="{size}" height="{size}" '
+    return (f'<svg class="glyph {cls}" viewBox="-38 -40 76 80" width="{size}" height="{size}" '
             f'aria-hidden="true" stroke="currentColor" fill="none" style="color:#2E2620">{ "".join(body) }</svg>')
