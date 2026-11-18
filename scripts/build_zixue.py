@@ -118,7 +118,7 @@ html = f'''<html lang="zh-Hans"><head><meta charset="utf-8">
  <button class="chip" data-filter="done" aria-pressed="false">已成字</button>
  <span class="count" id="cnt">共 {TOTAL} 字</span>
 </div>
-<p class="rule">体例：本义为第一义；构形取甲骨文、金文、小篆中最能说明造字本意的一说，异说标「一说」，不冒充定诂；引申只收正文实际用到的义。全书一千字分批补足，先成一至十课二百五十六字。字形为按构形自绘的释形示意，非拓本摹写：一至二课四十字已有字形，其余随补字逐批同类制图。</p>
+<p class="rule">体例：本义为第一义；构形取甲骨文、金文、小篆中最能说明造字本意的一说，异说标「一说」，不冒充定诂；引申只收正文实际用到的义。全书一千字已成，三十三课一字不缺。字形为按构形自绘的释形示意，非拓本摹写：一至十课二百五十六字为逐字手工拼制，余字按本表构形文（从某、某声）自动拼出，笔画关系较简，待分批精修。</p>
 {"".join(secs)}
 <div class="foot"><span>润泽说 · 蒙学之千字文 · v{VER}</span><span>单文件离线，不取外链</span></div>
 </div>
