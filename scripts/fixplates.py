@@ -44,6 +44,13 @@ def trim(quote: str, yw: str) -> str:
     return "，".join(got) + "。" if got else quote
 
 
+OVERRIDE = (
+    __import__("json").loads((PLATES / "captions.json").read_text(encoding="utf-8"))
+    if (PLATES / "captions.json").exists()
+    else {}
+)
+
+
 def strip(page: str) -> str:
     while True:
         i = page.find('<section class="plates">')
@@ -82,7 +89,7 @@ def main() -> int:
         figs = []
         for stem in per[n]:
             mm = re.match(r"第(\d\d)课-\S+?_(.+)", stem)
-            quote = lookup(kv, int(mm.group(1)), mm.group(2)) or ""
+            quote = OVERRIDE.get(stem) or lookup(kv, int(mm.group(1)), mm.group(2)) or ""
             quote = trim(quote, yw[n])
             short = mm.group(2)
             b64 = base64.b64encode((PLATES / f"{stem}.webp").read_bytes()).decode()
