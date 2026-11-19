@@ -6,8 +6,18 @@
 - 正文：一千字，三十三课
 - 体例：原文 · 字源 · 直译 · 深解 · 对课 · 生活场景 · 亲子问 · 写字 · AI形象字 · 全课字墙 · 跨典
 - 末课专题：字源演化 · 甲骨到今字（五字甲骨原形，四十字演化解读）
-- 附录一：识字，从甲骨文开始；附录二：甲骨文常用字 · 一百二十字详解（每字含 SVG 字形、合集号/著录号、取象解释与课次）
+- 附录一：识字，从甲骨文开始；附录二：甲骨文常用字 · 一百二十字详解（每字含 SVG 字形、合集号/著录号、取象解释与课次）；附录三：字源全解 · 一千字（一百字一字一卡，本义·构形·引申，另见 `docs/zixue.html` 检索页）
 - 核验：`book/甲骨文溯源核验-一百二十字.md`（殷契文渊逐字检索，102/120 检出；未检出者已改标）
+- 对校：`book/甲骨文图与-jiaguwen-对校.md`（与《道可道之甲骨文》七十六卷逐字对过：十二字拓片互证，七十八字仅字形对照，三十字对方未收）
+
+## 版本与代码
+
+- 当前版本见 `VERSION`（六处同号：VERSION / CITATION.cff / CHANGELOG / 阅读版页脚 / 站点页脚 / 骨架页脚）
+- 母本：`book/润泽说-蒙学之千字文.md`（唯一内容源，改这里）
+- 构建：`python3 scripts/build_docs.py`（阅读版 → `docs/book.html`）、`python3 scripts/build_zixue.py`（检索页 → `docs/zixue.html`）、`python3 scripts/apply_appendix3.py`（把字源全解装进阅读版第三十五页，可重跑）
+- 字形：`scripts/oracle_glyph.py`（六十个构件）、`scripts/auto_glyphs.py`（一千字手工规格）、`scripts/oracle_map.py`（合并启用）
+- 插图：`book/plates/`（六十七幅 WebP 与题注 `captions.json`）、`scripts/replates.py` / `fixplates.py`
+- 记事：`book/字源全解-进度.md`（字形精修八批与入书记录）
 
 ## 插图
 

@@ -1,22 +1,93 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>润泽说 蒙学之千字文</title>
+<title>润泽说 蒙学之千字文 · 一千字，一字一世界</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta http-equiv="refresh" content="0; url=book.html">
+<meta name="description" content="《润泽说 蒙学之千字文》通释、一千字字源全解、一百二十字甲骨文溯源。三十三课，一字一图，离线可读。">
 <style>
-html,body{margin:0;height:100%;background:#F7F4EE;color:#25211D;font-family:"Noto Serif SC","Songti SC",serif;}
-body{display:grid;place-items:center;text-align:center;}
-a{color:#994433;}
+:root{--ink:#2C2620;--ink2:#5E5347;--line:#DED4C1;--paper:#F6F0E3;--card:#FBF6EC;--seal:#9C3B2E}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Songti SC","Noto Serif SC","Source Han Serif SC",SimSun,serif;line-height:1.8}
+.wrap{max-width:960px;margin:0 auto;padding:64px 26px 72px}
+.kicker{font-size:12.5px;letter-spacing:.28em;color:#8C7A62}
+h1{font-size:44px;letter-spacing:.12em;margin:12px 0 6px;font-weight:600}
+h1 small{display:block;font-size:15px;letter-spacing:.22em;color:var(--ink2);font-weight:400;margin-top:10px}
+.lead{max-width:640px;color:var(--ink2);font-size:14.5px;margin:22px 0 34px;border-left:2px solid #CDBFA6;padding-left:16px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:38px}
+.stat{background:var(--card);padding:18px 14px;text-align:center}
+.n{font-size:28px;font-weight:600;line-height:1.3}
+.lab{font-size:12px;color:var(--ink2)}
+.entry{border-top:1px solid var(--line);padding:20px 0;display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.entry .idx{font-size:12px;letter-spacing:.2em;color:#8C7A62;width:52px;flex:none;padding-top:6px}
+.entry .body{flex:1 1 380px;min-width:260px}
+.entry h2{font-size:19px;margin:0 0 4px;font-weight:600}
+.entry p{font-size:13.5px;color:var(--ink2);margin:0 0 10px}
+.entry a{display:inline-block;min-height:40px;padding:8px 18px;border:1px solid #C9B99E;color:var(--ink);
+ text-decoration:none;font-size:13.5px;background:#FBF6EC}
+.entry a:hover{background:#EFE5D2}
+.entry a.open{border-color:var(--seal);color:var(--seal)}
+.verse{margin:46px 0 0;padding:22px 0 0;border-top:1px solid var(--line);color:var(--ink2);font-size:13.5px}
+.verse span{display:block}
+.foot{margin-top:34px;color:#8C7A62;font-size:12px}
+.foot a{color:#8C7A62}
+@media(max-width:780px){
+ .wrap{padding:44px 18px 56px}
+ h1{font-size:32px;letter-spacing:.08em}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .entry .idx{width:100%;padding:0}
+}
 </style>
 </head>
 <body>
-<main>
-<p>润泽说 蒙学</p>
-<h1>千字文</h1>
-<p><a href="book.html">开卷</a></p>
-</main>
+<div class="wrap">
+  <p class="kicker">润泽说 · 蒙学</p>
+  <h1>千字文<small>一千字 · 一字一世界</small></h1>
+  <p class="lead">南朝周兴嗣一夜成文，一千个不重复的字。本稿按三十三课通释：字有本义，文有次第，蒙学不只是识字，也是把天地人放回一个秩序里。</p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">1000</div><div class="lab">字 · 无一重复</div></div>
+    <div class="stat"><div class="n">33</div><div class="lab">课 · 逐句通释</div></div>
+    <div class="stat"><div class="n">67</div><div class="lab">幅 · 释义插图</div></div>
+    <div class="stat"><div class="n">120</div><div class="lab">字 · 甲骨溯源</div></div>
+  </div>
+
+  <div class="entry">
+    <div class="idx">阅读</div>
+    <div class="body">
+      <h2>全书阅读版</h2>
+      <p>三十三课加两个附录，分页读；每课有插图、有字解、有义理。附录二是甲骨文常用字一百二十字表，附录三是一千字字源全解。</p>
+      <a class="open" href="book.html">开卷</a>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="idx">检索</div>
+    <div class="body">
+      <h2>字源全解 · 一千字</h2>
+      <p>一千条一字一卡：字形示意、本义、构形、引申，按三十三课排。要查某个字，从这里进最快。</p>
+      <a href="zixue.html">查字</a>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="idx">母本</div>
+    <div class="body">
+      <h2>Markdown 母本与脚本</h2>
+      <p>书稿是纯文本，构建脚本可重跑；字形由构件拼成，改一个字只改一处规格。仓库 MIT 授权，可自行改写、印行。</p>
+      <a href="https://github.com/q1z2q3-debug/daokedao-qianziwen">仓库</a>
+    </div>
+  </div>
+
+  <div class="verse">
+    <span>天地玄黄，宇宙洪荒。</span>
+    <span>寒来暑往，秋收冬藏。</span>
+  </div>
+
+  <p class="foot">润泽说 道可道系列 · 蒙学之千字文 · 字源为释形示意，非拓本摹写 ｜ <a href="https://github.com/q1z2q3-debug/daokedao-qianziwen/releases">版本记录</a></p>
+</div>
 </body>
 </html>
