@@ -7,7 +7,7 @@
 - 甲骨文核验记录：https://raw.githubusercontent.com/q1z2q3-debug/daokedao-qianziwen/main/book/甲骨文溯源核验-一百二十字.md
 - 仓库：https://github.com/q1z2q3-debug/daokedao-qianziwen
 - 许可：CC BY-NC-SA 4.0
-- 引用：润泽. 润泽说 蒙学之千字文：v0.2.5. 2026.
+- 引用：润泽. 润泽说 蒙学之千字文：v0.5.4. 2026.
 
 ## 商业使用
 
