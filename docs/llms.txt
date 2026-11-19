@@ -3,6 +3,8 @@
 《千字文》全文通释，三十三课，亲子共读。正文一千字、二百五十句全覆盖；每课九项体例（原文·字源·直译深解·对课·生活场景·亲子问·写字·AI形象字·跨典），并配 64 幅无字满幅插图与一百二十字甲骨文详解附录。
 
 - 阅读版：https://q1z2q3-debug.github.io/daokedao-qianziwen/book.html
-- 母本：book/润泽说-蒙学之千字文.md
-- 甲骨文核验记录：book/甲骨文溯源核验-一百二十字.md
+- 母本：https://raw.githubusercontent.com/q1z2q3-debug/daokedao-qianziwen/main/book/润泽说-蒙学之千字文.md
+- 甲骨文核验记录：https://raw.githubusercontent.com/q1z2q3-debug/daokedao-qianziwen/main/book/甲骨文溯源核验-一百二十字.md
+- 仓库：https://github.com/q1z2q3-debug/daokedao-qianziwen
 - 许可：CC BY-NC-SA 4.0
+- 引用：润泽. 润泽说 蒙学之千字文：v0.2.5. 2026.
