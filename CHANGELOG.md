@@ -5,6 +5,7 @@
 - 站内绝对地址（`https://…/daokedao-qianziwen/` 与 `/daokedao-qianziwen/`）按页深改写为相对路径，裸 `sitemap.xml`、`robots.txt` 回链剥除；首页下载块用 `<!-- apk-dl:start -->/<!-- apk-dl:end -->` 包住，灌资产时自动剔除，包内无死链。
 - 包名 `com.runze.daokedaoqianziwen`、`versionCode 5004`、`versionName 0.5.4`，minSdk 21 / targetSdk 35，v1+v2+v3 签名。
 - 图标为作者新作「一筒众笔」：自适应图标，纸底 `#F7F4EE`，前景与单色层齐备，四档 legacy 图标原样入库，未做二次抠图。
+- 交付修正：`MainActivity` 的 Java 包名与清单 `applicationId` 对齐为 `com.runze.daokedaoqianziwen`（首包曾沿用论语包名，启动会 ClassNotFound），dex 类路径已核验。
 - 验收：包内站内链接 4 条零断链；412×915 移动视口 `scrollWidth == clientWidth == 412`、无溢出元素；`document.fonts` 两档 loaded；`unzip -tqq` 通过。
 
 ## 0.4.3 · 2026-11-19

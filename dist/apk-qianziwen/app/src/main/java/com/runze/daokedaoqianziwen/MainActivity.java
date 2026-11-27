@@ -1,4 +1,4 @@
-package com.runze.daokedaolunyu;
+package com.runze.daokedaoqianziwen;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;

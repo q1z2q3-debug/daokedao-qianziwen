@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.runze.daokedaolunyu'
+    namespace 'com.runze.daokedaoqianziwen'
     compileSdk 35
 
     signingConfigs {
@@ -18,11 +18,11 @@ android {
     }
 
     defaultConfig {
-        applicationId 'com.runze.daokedaolunyu'
+        applicationId 'com.runze.daokedaoqianziwen'
         minSdk 21
         targetSdk 35
-        versionCode 16042
-        versionName '0.16.42'
+        versionCode 5004
+        versionName '0.5.4'
     }
 
     buildTypes {
