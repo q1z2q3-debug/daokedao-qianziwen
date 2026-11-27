@@ -1,3 +1,12 @@
+## 0.5.4 · 2026-11-27 · 安卓安装包（APK）· 内嵌宋体离线全本
+
+- 首出安卓包 `docs/dl/daokedao-qianziwen-v0.5.4.apk`（8.3 MB，8,275,674 B）：零权限 WebView 阅读器，包内装 `index.html`、`book.html`（三十三课全文 9.5 MB）、`zixue.html`（字源全解一千字）、`甲骨文三源核验-十二字.html`，课页插图已是内嵌 webp，断网可读。
+- 宋体不靠系统：从 NotoSerifCJK 子集化 2512 字，400 档 0.6 MB、700 档 0.6 MB，家族名沿用页面 CSS 的「Noto Serif SC」，改字号不动页面。
+- 站内绝对地址（`https://…/daokedao-qianziwen/` 与 `/daokedao-qianziwen/`）按页深改写为相对路径，裸 `sitemap.xml`、`robots.txt` 回链剥除；首页下载块用 `<!-- apk-dl:start -->/<!-- apk-dl:end -->` 包住，灌资产时自动剔除，包内无死链。
+- 包名 `com.runze.daokedaoqianziwen`、`versionCode 5004`、`versionName 0.5.4`，minSdk 21 / targetSdk 35，v1+v2+v3 签名。
+- 图标为作者新作「一筒众笔」：自适应图标，纸底 `#F7F4EE`，前景与单色层齐备，四档 legacy 图标原样入库，未做二次抠图。
+- 验收：包内站内链接 4 条零断链；412×915 移动视口 `scrollWidth == clientWidth == 412`、无溢出元素；`document.fonts` 两档 loaded；`unzip -tqq` 通过。
+
 ## 0.4.3 · 2026-11-19
 
 - **精修第三批九十二字**：东西二京、背邙面洛、浮渭据泾、盘郁、写彩、丙舍旁启、甲帐对楹、肆筵设席、鼓瑟吹笙、升阶纳陛、弁转疑星、右通广内、左达承明、既集坟典、亦聚群英、杜稿钟隶、漆书壁经、府罗将相、路侠槐卿、户封八县、家给千兵、高冠陪辇、驱毂振缨等。

@@ -1,0 +1,9 @@
+
+# APK 工程
+dist/apk-qianziwen/build/
+dist/apk-qianziwen/.debug.keystore
+dist/apk-qianziwen/app/src/main/assets/
+dist/apk-qianziwen/.gradle/
+dist/apk-qianziwen/local.properties
+*.idsig
+dist/*.apk

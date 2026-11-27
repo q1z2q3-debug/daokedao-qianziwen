@@ -19,6 +19,12 @@
 - 插图：`book/plates/`（六十七幅 WebP 与题注 `captions.json`）、`scripts/replates.py` / `fixplates.py`
 - 记事：`book/字源全解-进度.md`（字形精修八批与入书记录）
 
+## 安卓安装包
+
+- 直链：<https://q1z2q3-debug.github.io/daokedao-qianziwen/dl/daokedao-qianziwen-v0.5.4.apk>（8.3 MB，零权限、断网可读、宋体字集内置）
+- 校验：`docs/dl/SHA256SUMS.txt`；包名 `com.runze.daokedaoqianziwen`，versionCode 5004。
+- 工程：`dist/apk-qianziwen/`（`apk-config.json` 驱动，`scripts/build_apk_assets.py` 灌资产，`build.sh` 走 aapt2→d8→apksigner 手工链）。
+
 ## 插图
 
 全书 67 幅无字满幅画（每课一至三幅），每课原文之后即为题图：纸色 #EFE7D6，墨、赭石、花青三色，人物只作侧影背影，画面不题一字。题注取该幅对应的原文句；画不是注解，是让孩子先把景象看见，再读字。

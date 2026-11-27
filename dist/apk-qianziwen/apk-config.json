@@ -1,0 +1,51 @@
+{
+  "slug": "qianziwen",
+  "out": "daokedao-qianziwen",
+  "package": "com.runze.daokedaoqianziwen",
+  "app_name": "道可道之千字文",
+  "version_code": 5004,
+  "version_name": "0.5.4",
+  "docs": "docs",
+  "entry": "index.html",
+  "copy_files": [
+    "index.html",
+    "book.html",
+    "zixue.html",
+    "甲骨文三源核验-十二字.html",
+    "favicon.svg",
+    "llms.txt"
+  ],
+  "copy_dirs": [],
+  "site_prefixes": [
+    "https://q1z2q3-debug.github.io/daokedao-qianziwen/",
+    "https://q1z2q3-debug.github.io/daokedao-qianziwen",
+    "/daokedao-qianziwen/"
+  ],
+  "bare_index_fix": false,
+  "strip_blocks": [
+    [
+      "<!-- apk-dl:start -->",
+      "<!-- apk-dl:end -->"
+    ]
+  ],
+  "strip_hrefs": [
+    "sitemap.xml",
+    "robots.txt"
+  ],
+  "strip_link_regex": [
+    "fonts/css2"
+  ],
+  "font": {
+    "family": "Noto Serif SC",
+    "weights": {
+      "400": [
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc",
+        2
+      ],
+      "700": [
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc",
+        2
+      ]
+    }
+  }
+}
